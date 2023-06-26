@@ -54,6 +54,10 @@ html {
     justify-content: space-between;
 }
 
+#logo img {
+    width: 3rem;
+}
+
 .navbar {
     /* border: 2px solid red; */
     /* height: 50px; */
