@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <link rel="icon" href="./assets/h2_logo_white.png" type="image/icon type">
-
+    <script src="./script.js"></script>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Himanshu Hardiya</title>
@@ -20,22 +20,39 @@
 
 <body>
     <header class="header">
-        <div class="" id="logo">
+        <div class="main_header">
+            <div class="" id="logo">
 
-            <img src="./assets/h2_logo_white.png" alt="">
+                <img src="./assets/h2_logo_white.png" alt="">
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="btn" id="resume_btn">
+                Resume
+            </div>
+            <div class="menu_icon">
+                <i class="fa-solid fa-bars" style="color: #ffffff;" onclick="demoDisplay()"></i>
+            </div>
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#service">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="btn" id="resume_btn">
-            Resume
+        <div class="hidden_nav">
+            <nav class="hidden_navbar">
+                <ul onclick="demoDisplay()">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
+
     </header>
 
 
@@ -88,6 +105,7 @@
             Projects
         </div>
         <div id="project_content">
+            
             <div class="card" id="card1">
                 <div class="card_image">
                     <img src="./assets/fitline.png" alt="">
@@ -120,9 +138,9 @@
             Services
         </div>
         <div id="service_content">
-            <div id="whatido">
-                What i do?
-            </div>
+            <!-- <div id="whatido">
+                What Do I Do?
+            </div> -->
             <div id="services">
                 <div class="service_card" id="service1">
                     <div class="service_title">
