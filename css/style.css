@@ -1,5 +1,6 @@
 * {
     margin: 0%;
+    padding: 0%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
     border: none;
@@ -10,6 +11,16 @@
 
 html {
     font-size: 10px;
+    /* font-size: 1rem; */
+    /* border: none; */
+    /* background-color: black; */
+    margin: 0%;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 :root {
@@ -29,45 +40,16 @@ html {
 /* HEADER */
 
 
-.btn {
-    background-color: var(--white);
-    border-radius: 5px;
-    padding: .7rem;
-    text-align: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-#resume_btn {
-    font-size: 1.7rem;
-    color: var(--white);
-    background-color: var(--green);
-    height: 3.5rem;
-    border: .7px solid var(--white);
-    box-shadow: 2px 2px 3px var(--black);
-    transition: all 0.5s ease-in-out;
-}
-
-#resume_btn:hover {
-    /* transform: scale(1.1); */
-    box-shadow: 2px 2px 3px var(--black);
-
-}
-
-/* #resume_btn:hover { */
-/* color: var(--yellow_green); */
-/* background-color: var(--yellow_green); */
-/* } */
 
 .header {
     border: 1px solid rgba(255, 255, 255, 0.113);
     background-color: rgba(255, 255, 255, .15);
     backdrop-filter: blur(10px);
     box-shadow: var(--box_shadow);
-    padding: 1.7rem;
+    padding: 1rem;
     position: fixed;
     display: flex;
-    top: 0%;
+    /* top: 0%; */
     right: 0%;
     left: 0%;
     z-index: 10;
@@ -99,7 +81,7 @@ html {
     list-style: none;
     /* border: 2px solid rgb(0, 191, 255); */
     /* margin: 0p; */
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 .navbar ul li a {
@@ -108,7 +90,33 @@ html {
     font-weight: 600;
 }
 
+/* 
+.btn {
+   
+} */
 
+#resume_btn {
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    /* align-items: center; */
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--green);
+    height: auto;
+
+    border: .7px solid var(--white);
+    box-shadow: 2px 2px 3px var(--black);
+    transition: all 0.5s ease-in-out;
+}
+
+#resume_btn:hover {
+    /* transform: scale(1.1); */
+    box-shadow: 2px 2px 3px var(--black);
+
+}
 
 /* HOME */
 
@@ -124,7 +132,8 @@ html {
     background-image: url(../assets/home_bg_image.webp);
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    max-height: auto;
+    max-width: 100%;
 }
 
 /* 
@@ -133,8 +142,9 @@ html {
 } */
 
 #home_content {
-    /* border: 2px solid red; */
-    display: inline-block;
+    border: 2px solid red;
+    display: flex;
+    flex-flow: column wrap;
 }
 
 .home {
@@ -149,13 +159,13 @@ html {
     /* color: var(--dark_grey); */
     /* font-family: 'Ysabeau Office' , sans-serif; */
     margin-bottom: 1rem;
-}
-
-#home_name {
     display: flex;
     /* border: 2px solid red; */
+    flex-flow: row wrap;
     align-items: center;
 }
+
+#home_name {}
 
 #home_name span {
     display: block;
@@ -269,6 +279,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: row wrap;
+    gap: 35px;
 }
 
 #project_content .card {
@@ -278,11 +290,12 @@ html {
     margin: 0rem 5rem;
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.213);
-    background-color: rgba(255, 255, 255, .25);
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(2px);
     box-shadow: 2px 2px 30px var(--black);
     border-radius: 3rem;
     transition: all .5s ease-in-out;
+    flex: 1 1;
 }
 
 #project_content .card:hover {
@@ -293,7 +306,7 @@ html {
     width: 100%;
     border-radius: 2rem;
     margin-bottom: 2rem;
-    /* height: 70%; */
+    height: auto;
     border: 2px solid var(--black);
 }
 
@@ -419,7 +432,7 @@ html {
 }
 
 #form {
-    /* border: 3px solid white; */
+    border: 3px solid white;
     width: 45%;
     /* height: auto; */
     margin: auto;
@@ -436,7 +449,7 @@ html {
     /* left: 0%; */
     /* margin: 0%; */
     /* padding: 0; */
-    /* border: 3px solid rgb(217, 255, 0); */
+    border: 3px solid rgb(217, 255, 0);
     /* gap: 2%; */
 }
 
@@ -456,7 +469,7 @@ textarea {
 }
 
 #form_name .names {
-    /* border: 2px solid red; */
+    border: 2px solid red;
     width: 100%;
 }
 
@@ -500,4 +513,35 @@ textarea {
     font-size: 3rem;
     list-style: none;
     display: inline;
+}
+
+
+@media screen and (max-width:800px) {
+    #contact {
+        padding: 8.7rem 1rem;
+        border: 2px solid greenyellow;
+
+    }
+
+    #form {
+        width: 70%;
+
+    }
+
+    #form_name {
+        flex-flow: row wrap;
+        /* gap: 0px;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0%; */
+    }
+
+    #fname {
+        margin: 0px;
+    }
+
+    #lname {
+        margin: 0px;
+    }
+
 }
